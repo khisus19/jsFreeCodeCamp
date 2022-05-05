@@ -38,8 +38,14 @@ function lookUpProfile(name, prop) {
     // Cambia solo el código encima de esta línea
 }
   
-lookUpProfile("Akira", "likes");
+console.log(lookUpProfile("Sherlock", "lastName"));
+console.log(lookUpProfile("Kristian", "likes"));
+console.log(lookUpProfile("Kristian", "hobbies"));
+
 
 /* Code Explanation
-The for loop runs through contacts. The if statement checks if the name arg is in the array. If it find a name that match with first.Name then return that contact prop value (if it has that property). The || means that if contacts[i][prop] does not exists then return "No such property". The for loop keep looking until it can't find more name that match the if then return "No such contact"
+The for loop runs through contacts. The if statement checks if the name arg is in the array. 
+If it find a name that match with first.Name then return that contact prop value (if it has that property). 
+The || means that if contacts[i][prop] does not exists then return "No such property". 
+The for loop keep looking until it can't find more name that match the if then return "No such contact"
  */
