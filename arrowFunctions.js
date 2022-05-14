@@ -14,7 +14,7 @@ console.log(date1());
 
 // Arrow functions with parameters
 
-const doubler = (num) => num * 2;
+const doubler = num => num * 2;
 
 console.log(doubler(2));
 
