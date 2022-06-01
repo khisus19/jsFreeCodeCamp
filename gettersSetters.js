@@ -38,13 +38,21 @@ class Thermostat {
     set temperature(tempi){
       this._temperatureCelsius = tempi;
     }
-  }
-  // Only change code above this line
-  
-  const thermos = new Thermostat(76); // Setting in Fahrenheit scale
-  console.log(thermos);
-  let temp = thermos.temperature; // 24.44 in Celsius - Usando el getter
-  console.log(temp);
-  thermos.temperature = 26;
-  temp = thermos.temperature; // 26 in Celsius - Usando el setter
-  console.log(temp);
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+console.log(thermos);
+let temp = thermos.temperature; // 24.44 in Celsius - Usando el getter
+console.log(temp);
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius - Usando el setter
+console.log(temp);
+
+let objeto = {
+  name: "jesus",
+  age: 40,
+  country: "ven",
+}
+
+console.log(Object.values(objeto))
