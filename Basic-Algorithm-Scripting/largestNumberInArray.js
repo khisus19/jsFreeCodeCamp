@@ -23,7 +23,7 @@ console.log(result);
 function largestOfFour(arr) {
     const results = [];
     for (let i = 0; i < arr.length; i++) {
-      let largestNumber = arr[i][0];
+      let largestNumber = arr[i][0]; // The first element is counted as the provitional highest
       for (let j = 1; j < arr[i].length; j++) {
         if (arr[i][j] > largestNumber) {
           largestNumber = arr[i][j];
