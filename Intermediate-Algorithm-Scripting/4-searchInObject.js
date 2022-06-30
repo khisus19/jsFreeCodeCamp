@@ -6,22 +6,34 @@ For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { f
  */
 
 function whatIsInAName(collection, source) {
-    let arr = [];
+    let arr = []
     // Only change code below this line
     let keys = Object.keys(source)
-    for (let i = 0; i < keys.length; i++) {
-        //console.log(keys[i])
-        let object = collection.map(item => { 
-            if (item.hasOwnProperty(keys[i])){
-                return item;
+    arr = collection.filter(obj => {
+        for (let i = 0; i < keys.length; i++) {
+            if (!obj.hasOwnProperty(keys[i]) || obj[keys[i]] !== source[keys[i]]) {
+              return false;
             }
-        });
-        console.log(object)
-    }
+        }
+        return true
+    })
+    console.log(arr)
+
     // Only change code above this line
     return arr;
 }
 
-//whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
-//whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 });
-whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 });
+// whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 });
+// whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }); //-> [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]
+
+function whatIsInAName(collection, source) {
+    // "What's in a name? that which we call a rose
+    // By any other name would smell as sweet.”
+    // -- by William Shakespeare, Romeo and Juliet
+    const sourceKeys = Object.keys(source);
+  
+    return collection
+      .filter(obj => sourceKeys
+                       .every(key => obj.hasOwnProperty(key) && obj[key] === source[key]));
+}
