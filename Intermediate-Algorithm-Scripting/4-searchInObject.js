@@ -5,6 +5,8 @@ Make a function that looks through an array of objects (first argument) and retu
 For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
  */
 
+// THIS ONE REALLY GOT ME. I need to practice more excersise like this one
+
 function whatIsInAName(collection, source) {
     let arr = []
     // Only change code below this line
@@ -27,6 +29,7 @@ function whatIsInAName(collection, source) {
 whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 });
 // whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }); //-> [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]
 
+// I liked this solution better
 function whatIsInAName(collection, source) {
     // "What's in a name? that which we call a rose
     // By any other name would smell as sweet.”
